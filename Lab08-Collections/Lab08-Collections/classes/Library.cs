@@ -34,7 +34,7 @@ namespace Lab08_Collections
             T[] temp;
             T removedBook = default(T);
 
-            if (IsAvailable(item))
+            if (item = true)
             {
                 if (bookCount < bookshelf.Length / 2)
                 {
@@ -55,12 +55,19 @@ namespace Lab08_Collections
                         removedBook = bookshelf[i];
                     }
                 }
-            }
             bookshelf = temp;
             tempCount--;
-        }
+            }
         return removedBook; 
+        }
+        
+        public int Count()
+        {
+            return bookCount;
+        }
     }
+
+   
 
     
 }
