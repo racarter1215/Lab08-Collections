@@ -43,7 +43,7 @@ namespace Lab08_Collections
 
                 string userInput = Console.ReadLine();
                 ///below is code that runs when a user picks 1
-                if(userInput == "1")
+                if (userInput == "1")
                 {
                     Console.Clear();
                     ShowAllBooks();
@@ -63,29 +63,42 @@ namespace Lab08_Collections
                     string userLastName = Console.ReadLine();
                     Console.WriteLine();
 
-                    AddABook()
-                    
+                    AddABook(userTitle, userFirstName, userLastName);
+
+
                 }
                 ///below is code that runs when a user picks 3
                 else if (userInput == "3")
                 {
                     Console.Clear();
 
-                    Dictionary<int, string> books = new Dictionary<int, string>();
+                    Dictionary<int, Book> books = new Dictionary<int, Book>();
                     Console.WriteLine("Please select a book. Only use available numbers.");
                     int counter = 1;
                     foreach (Book book in Library)
                     {
-                        books.Add(counter, book.Title);
-                        Console.WriteLine($"{counter++}, {book.Title}, {book.Author.FirstName}, {book.Author.LastName}");
+                        books.Add(counter, book);
+                        Console.WriteLine($"{counter++}. {book.Title}, {book.Author.FirstName}, {book.Author.LastName}");
                     }
+
+                    // we need to capture the user input. 
+                    // user input will be the "key"
+                    string input = Console.ReadLine();
+                    // conver the input to a int
+                    int option = int.Parse(input);
+                    // let's GET The book from the library 
+                    BookBag.Add(books[option]);
+
+                    // let's remove from the library
+                    Library.RemoveBook(option - 1);
+
                 }
                 ///below is code that runs when a user picks 5
                 else if (userInput == "5")
                 {
                     Console.Clear();
 
-                    foreach (Book book in Bookbag)
+                    foreach (Book book in BookBag)
                     {
                         Console.WriteLine($"{book.Title}, {book.Author.FirstName}, {book.Author.LastName}");
                     }
@@ -109,17 +122,42 @@ namespace Lab08_Collections
         /// <param name="lastName">the author's last name</param>
         static void AddABook(string title, string firstName, string lastName)
         {
-        Book book = new Book() { Title = title, Author = new Author() {FirstName = firstName, LastName = lastName }, Genre = Genre.SciFi;
-        Library.AddBook(book);
+            Book book = new Book()
+            {
+                Title = title,
+                Author = new Author() { FirstName = firstName, LastName = lastName },
+                Genre = Genre.SciFi
+            };
+            Library.AddBook(book);
         }
         /// <summary>
         /// when completed, the method below will load books into the bookshelf
         /// </summary>
         static void LoadBooks()
         {
-            Book first = new Book { Title = "Alice in Wonderland", Author = new Author() { FirstName = "Lewis"} }
+            Book first = new Book { Title = "Alice in Wonderland", Author = new Author() { FirstName = "Lewis", LastName = "Carol" } };
+            Book second = new Book { Title = "Green Eggs and Ham", Author = new Author() { FirstName = "Dr.", LastName = "Suess" }, Genre = Genre.Mystery };
+
+
+            Library.AddBook(first);
+            Library.AddBook(second);
         }
 
-            
+
+        /// <summary>
+        /// Displays all books currently in the library to the user
+        /// </summary>
+        static void ShowAllBooks()
+        {
+            // how do we access all the itms in the library?
+
+            foreach (Book book in Library)
+            {
+                Console.WriteLine(book.Title);
+            }
+
+        }
+
+
     }
 }
