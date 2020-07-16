@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using System.Drawing;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
@@ -25,49 +26,45 @@ namespace Lab08_Collections
         /// <summary>
         /// The below method removes an item from the bookshelf list
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="book"></param>
         /// <returns></returns>
-        public T RemoveBook(T item)
+        public void RemoveBook(int bookIndex)
         {
-            int quarter = bookCount - 1;
-            int tempCount = 0;
-            T[] temp;
-            T removedBook = default(T);
-
-            if (item = true)
-            {
-                if (bookCount < bookshelf.Length / 2)
+            T[] newArray = new T[ bookCount - 1 ];
+            
+                for(int i = 0; i < bookCount; i++)
                 {
-                    temp = new T[quarter];
-                }
-                else
-                {
-                    temp = new T[bookshelf.Length];
-                }
-                for (int i = 0; i < bookCount; i++)
-                {
-                    if(bookshelf[i] != null)
+                    if(i < bookIndex)
                     {
-                        tempCount++;
+                        newArray[i] = bookshelf[i];
+                    }
+                    else if(i == bookIndex)
+                    {
+                    continue;
                     }
                     else
                     {
-                        removedBook = bookshelf[i];
+                        newArray[i - 1] = bookshelf[i];
                     }
                 }
-            bookshelf = temp;
-            tempCount--;
-            }
-        return removedBook; 
+            bookshelf = newArray;
         }
-        
-        public int Count()
+
+        public int CountBooks()
         {
             return bookCount;
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < bookCount; i++)
+            {
+                yield return bookshelf[i];
+            }
+        }
+        System.Collections.IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
-
-   
-
-    
 }

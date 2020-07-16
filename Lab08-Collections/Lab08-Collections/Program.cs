@@ -52,11 +52,19 @@ namespace Lab08_Collections
                     Console.Write("Author Last Name: ");
                     string userLastName = Console.ReadLine();
                     Console.WriteLine();
-                    Console.Write("Book Length: ");
-                    string userBookLength = Console.ReadLine();
-                    Console.WriteLine();
-
                     
+                }
+                else if(userInput == "3")
+                {
+                    Console.Clear();
+
+                    Dictionary<int, string> books = new Dictionary<int, string>();
+                    Console.WriteLine("Please select a book. Only use available numbers.");
+                    int counter = 1;
+                    foreach (Book book in Library)
+                    {
+
+                    }
                 }
             }
         }
