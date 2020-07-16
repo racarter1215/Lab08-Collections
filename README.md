@@ -26,6 +26,6 @@
 
 
 #### Change Log
-###### 1.3: Updated app with vitrual and abstract methods and properties utilizing override - 14 July 2020
-###### 1.2: Updated UML picture and code comments - 14 July 2020
-###### 1.1: App first created - 13 July 2020
+
+###### 1.2: Collaboration effort made to optimize code - 15 July 2020
+###### 1.1: App first created - 15 July 2020
