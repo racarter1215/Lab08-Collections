@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Drawing;
@@ -27,7 +28,7 @@ namespace Lab08_Collections
         /// The below method removes an item from the bookshelf list
         /// </summary>
         /// <param name="book"></param>
-        /// <returns></returns>
+        /// <returns>new bookshelf length based off of new book array length</returns>
         public void RemoveBook(int bookIndex)
         {
             T[] newArray = new T[ bookCount - 1 ];
@@ -54,7 +55,7 @@ namespace Lab08_Collections
         {
             return bookCount;
         }
-
+        //below allows the IEnumerable to operate, specifically calls for the IEnumerator
         public IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < bookCount; i++)
@@ -62,7 +63,7 @@ namespace Lab08_Collections
                 yield return bookshelf[i];
             }
         }
-        System.Collections.IEnumerator IEnumerable.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
