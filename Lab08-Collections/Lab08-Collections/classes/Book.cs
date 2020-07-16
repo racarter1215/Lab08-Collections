@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Lab08_Collections
 {
-    class Book
+    public class Book
     {
         public string Title { get; set; }
         public string Author { get; set; }
-        public string BookGenre { get; set; }
-        public string BookLength { get; set; }
+        public string Genre { get; set; }
+        
     }
 
-    enum BookGenre
+    enum Genre
     {
         SciFi,
         History,
