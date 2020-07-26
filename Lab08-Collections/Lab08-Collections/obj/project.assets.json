@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\aiver\\.nuget\\packages\\": {}
+    "C:\\Users\\racar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aiver\\Source\\Repos\\RobertLab08-Collections\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections.csproj",
+      "projectUniqueName": "C:\\Users\\racar\\codefellows\\102\\projects\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections.csproj",
       "projectName": "Lab08-Collections",
-      "projectPath": "C:\\Users\\aiver\\Source\\Repos\\RobertLab08-Collections\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections.csproj",
-      "packagesPath": "C:\\Users\\aiver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aiver\\Source\\Repos\\RobertLab08-Collections\\Lab08-Collections\\Lab08-Collections\\obj\\",
+      "projectPath": "C:\\Users\\racar\\codefellows\\102\\projects\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections.csproj",
+      "packagesPath": "C:\\Users\\racar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\racar\\codefellows\\102\\projects\\Lab08-Collections\\Lab08-Collections\\Lab08-Collections\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aiver\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\racar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,18 +53,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.2, 3.1.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
