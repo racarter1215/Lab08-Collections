@@ -3,6 +3,8 @@
 ##### Author: Robert Carter
 ##### Collaborated with: Bryant Davis, Peyton Cysewski, Amanda Iverson (guidance during lecture and in Lab instructions)
 
+##### Note: Amanda used this code during code review in lecture, so some of it is her code. She told me to let you know!
+
 ### Description
 
 ##### This is a C# console application that will utilize collections and enumerations to create a virtual library that a user can interact with in a variety of ways.

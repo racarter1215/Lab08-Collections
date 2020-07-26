@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Lab08-Collections",
+    "\\Lab08-Collections\\Lab08-Collections",
+    "\\Lab08-Collections\\Lab08-Collections\\classes"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Lab08-Collections\\Lab08-Collections\\classes\\Library.cs",
   "PreviewInSolutionExplorer": false
 }
