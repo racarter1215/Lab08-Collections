@@ -25,7 +25,7 @@ namespace Lab08_Collections
         /// <summary>
         /// below is a method that, when called, allows a user to interact with the app using preset options
         /// </summary>
-        static void UserInterface()
+        public static void UserInterface()
         {
             bool exit = false;
             while (!exit)
@@ -120,7 +120,7 @@ namespace Lab08_Collections
         /// <param name="title">the title of the book</param>
         /// <param name="firstName">the author's first name</param>
         /// <param name="lastName">the author's last name</param>
-        static void AddABook(string title, string firstName, string lastName)
+        public static void AddABook(string title, string firstName, string lastName)
         {
             Book book = new Book()
             {
@@ -133,7 +133,7 @@ namespace Lab08_Collections
         /// <summary>
         /// when completed, the method below will load books into the bookshelf
         /// </summary>
-        static void LoadBooks()
+        public static void LoadBooks()
         {
             Book first = new Book { Title = "Alice in Wonderland", Author = new Author() { FirstName = "Lewis", LastName = "Carol" } };
             Book second = new Book { Title = "Green Eggs and Ham", Author = new Author() { FirstName = "Dr.", LastName = "Suess" }, Genre = Genre.Mystery };
@@ -147,7 +147,7 @@ namespace Lab08_Collections
         /// <summary>
         /// Displays all books currently in the library to the user
         /// </summary>
-        static void ShowAllBooks()
+        public static void ShowAllBooks()
         {
             // how do we access all the itms in the library?
 
